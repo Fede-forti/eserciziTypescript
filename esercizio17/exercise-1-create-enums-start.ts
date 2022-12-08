@@ -18,7 +18,7 @@ enum Currency {
 
 interface Country {
     name: string;
-    currency: string;
+    currency: Currency;
 }
 
 // Replace the string values for the `currency` properties below with
@@ -26,28 +26,34 @@ interface Country {
 const countries: Country[] = [
     {
         name: "France",
-        currency: "Euro",
+        currency: Currency.Euro,
     },
     {
         name: "United States of America",
-        currency: "Dollar",
+        currency: Currency.Dollar,
     },
     {
         name: "Italy",
-        currency: "Euro",
+        currency: Currency.Euro,
     },
     {
         name: "New Zealand",
-        currency: "Dollar",
+        currency: Currency.Dollar,
     },
 ];
 
 // Create a string enum named `LanguageStatus`. Use it to replace the
 // string values for the `status` properties in the objects below.
 
+
+enum LanguageStatus {
+    Primary,
+    Secondary,
+}
+
 const countryLanguages = [
-    { language: "Spanish", status: "primary" },
-    { language: "English", status: "secondary" },
+    { language: "Spanish", status: LanguageStatus.Primary },
+    { language: "English", status: LanguageStatus.Secondary },
 ];
 
 // ----
